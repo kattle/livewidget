@@ -1,0 +1,13 @@
+QMAKE_DEFAULT_INCDIRS = \
+    /usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 \
+    /usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi \
+    /usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward \
+    /usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include \
+    /usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed \
+    /usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include \
+    /usr/local/arm_linux_4.8/usr/include
+QMAKE_DEFAULT_LIBDIRS = \
+    /usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4 \
+    /usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/lib \
+    /usr/local/arm_linux_4.8/lib \
+    /usr/local/arm_linux_4.8/usr/lib

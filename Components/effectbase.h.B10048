@@ -1,0 +1,20 @@
+#ifndef EFFECTBASE_H
+#define EFFECTBASE_H
+
+#include <QWidget>
+#include "global.h"
+
+class EffectBase : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit EffectBase(QWidget *parent = nullptr);
+    ~EffectBase();
+
+signals:
+
+public slots:
+};
+
+
+#endif // EFFECTBASE_H
