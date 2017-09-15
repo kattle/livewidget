@@ -45,10 +45,10 @@
      <widget class="WidgetArrow" name="wid_arrow" native="true">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>60</y>
-        <width>151</width>
-        <height>161</height>
+        <x>140</x>
+        <y>80</y>
+        <width>111</width>
+        <height>141</height>
        </rect>
       </property>
      </widget>

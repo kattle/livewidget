@@ -61,7 +61,7 @@ public:
         page_lift->setObjectName(QStringLiteral("page_lift"));
         wid_arrow = new WidgetArrow(page_lift);
         wid_arrow->setObjectName(QStringLiteral("wid_arrow"));
-        wid_arrow->setGeometry(QRect(100, 60, 151, 161));
+        wid_arrow->setGeometry(QRect(140, 80, 111, 141));
         stackedWidget->addWidget(page_lift);
         page_setting = new QWidget();
         page_setting->setObjectName(QStringLiteral("page_setting"));

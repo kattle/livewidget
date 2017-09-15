@@ -43,14 +43,24 @@ void WidgetArrow::slot_ExecOperate(AREA_OPERATE pOperate, QVariant pPara)
                 case ARROW_UP:
                 mCurArrowPix = QPixmap(mImgFileList.at(0));
                 mArrowOrientation = ARROW_ROLLUP;
+                break;
 
                 case ARROW_DOWN:
                 mCurArrowPix = QPixmap(mImgFileList.at(1));
                 mArrowOrientation = ARROW_ROLLDOWN;
+                break;
 
                 case ARROW_UPDOWN:
                 mCurArrowPix = QPixmap(mImgFileList.at(2));
                 mArrowOrientation = ARROW_STANDBY;
+                break;
+
+                default:
+                mCurArrowPix = QPixmap(mImgFileList.at(0));
+                mArrowOrientation = ARROW_ROLLUP;
+                break;
+
+
 
             }
             break;
@@ -58,7 +68,7 @@ void WidgetArrow::slot_ExecOperate(AREA_OPERATE pOperate, QVariant pPara)
         default:
             break;
     }
-    update();
+    this->update();
 
 }
 

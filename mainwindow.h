@@ -46,6 +46,8 @@ private:
 protected:
     void keyPressEvent(QKeyEvent *e);
     void keyReleaseEvent(QKeyEvent *e);
+    void paintEvent();
+  
 
 };
 

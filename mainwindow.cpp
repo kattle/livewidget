@@ -56,8 +56,7 @@ void MainWindow::InitRc()
     }
 
     connect(ui->splash,SIGNAL(splashOver()),this,SLOT(slot_gotoMainPage()));
-    ui->wid_arrow->InitRc(mRcPath+ QString("/../Arrow/"));
-    ui->wid_arrow->slot_ExecOperate(OPERATE_CHANGE, ARROW_DOWN);
+
 //    GotoPage(E_PAGE_SETTING);
 
 
@@ -104,6 +103,9 @@ void MainWindow::slot_serialRead()
 void MainWindow::slot_gotoMainPage()
 {
     GotoPage(E_PAGE_LIFT);
+    ui->wid_arrow->InitRc(mRcPath+ QString("/../Arrow/"));
+    ui->wid_arrow->slot_ExecOperate(OPERATE_CHANGE, ARROW_DOWN);
+
 //    GotoPage(E_PAGE_SETTING);
 
 }
