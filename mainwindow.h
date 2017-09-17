@@ -10,6 +10,7 @@
 #include <QPalette>
 
 
+
 namespace Ui {
 class MainWindow;
 }

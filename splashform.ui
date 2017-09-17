@@ -23,7 +23,25 @@
 QProgressBar::chunk {
         border: none;
         background: rgb(0, 160, 230);
-}</string>
+}
+
+QWidget#desktop {
+        background: rgb(68, 69, 73);
+}
+QWidget{
+        font-size: 15px;
+        font-family: &quot;arial&quot;;
+
+}
+
+QLabel#label {
+        font: bold;
+        font-family: &quot;arial&quot;;
+        color: rgb(255, 0, 0);
+        font-size: 20px;
+}
+
+</string>
   </property>
   <widget class="QProgressBar" name="progressBar">
    <property name="geometry">

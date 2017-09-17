@@ -45,6 +45,19 @@ public:
         MainWindow->setStyleSheet(QLatin1String("QWidget#desktop {\n"
 "        background: rgb(68, 69, 73);\n"
 "}\n"
+"QWidget{\n"
+"        font-size: 15px;\n"
+"        font-family: \"arial\";\n"
+"\n"
+"}\n"
+"\n"
+"QLabel#label {\n"
+"        font: bold;\n"
+"        font-family: \"arial\";\n"
+"        color: rgb(255, 0, 0);\n"
+"        font-size: 20px;\n"
+"}\n"
+"\n"
 ""));
         desktop = new QWidget(MainWindow);
         desktop->setObjectName(QStringLiteral("desktop"));
@@ -61,16 +74,16 @@ public:
         page_lift->setObjectName(QStringLiteral("page_lift"));
         wid_arrow = new WidgetArrow(page_lift);
         wid_arrow->setObjectName(QStringLiteral("wid_arrow"));
-        wid_arrow->setGeometry(QRect(100, 60, 151, 161));
+        wid_arrow->setGeometry(QRect(140, 80, 111, 141));
         stackedWidget->addWidget(page_lift);
         page_setting = new QWidget();
         page_setting->setObjectName(QStringLiteral("page_setting"));
         label = new QLabel(page_setting);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(230, 170, 221, 41));
+        label->setGeometry(QRect(300, 250, 221, 41));
         pushButton = new QPushButton(page_setting);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(290, 80, 99, 27));
+        pushButton->setGeometry(QRect(290, 310, 99, 27));
         stackedWidget->addWidget(page_setting);
         MainWindow->setCentralWidget(desktop);
 

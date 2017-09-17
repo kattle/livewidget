@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     mRcPath = qApp->applicationDirPath();
 
 
+
 //    int tmpRotate = GetSetting("System/Rotate").toInt();
 //    mView->SetRotate(tmpRotate);
 
@@ -18,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //        mSplashForm->setFixedSize(qApp->desktop()->size());
 
     InitRc();
+
 }
 
 MainWindow::~MainWindow()
@@ -25,6 +27,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+/*! initial all the widgets in the splash screen*/
 void MainWindow::InitRc()
 {
     GotoPage(E_PAGE_STARTUP);
@@ -102,27 +106,24 @@ void MainWindow::slot_serialRead()
 
 void MainWindow::slot_gotoMainPage()
 {
-    GotoPage(E_PAGE_LIFT);
-    ui->wid_arrow->InitRc(mRcPath+ QString("/../Arrow/"));
-    ui->wid_arrow->slot_ExecOperate(OPERATE_CHANGE, ARROW_DOWN);
+//    GotoPage(E_PAGE_LIFT);
+//    ui->wid_arrow->InitRc(mRcPath+ QString("/../Arrow/"));
+//    ui->wid_arrow->slot_ExecOperate(OPERATE_CHANGE, ARROW_DOWN);
 
-//    GotoPage(E_PAGE_SETTING);
+    GotoPage(E_PAGE_SETTING);
+    ui->label->setFocus();  //>  nofocuspolicy
 
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *e)
 {
-//需要点击后才能触发，这是一个问题
+    //here you gan do your own operation
     ui->label->setText(QString("keyPressed: [0x") + QString("%1]").arg(QString::number(e->key(),16)));
-    update();
-    IDE_TRACE_INT(e->key());
 }
 
 void MainWindow::keyReleaseEvent(QKeyEvent *e)
 {
     ui->label->setText(QString("keyReleased: [0x") + QString("%1]").arg(QString::number(e->key(),16)));
-    update();
-    IDE_TRACE_INT(e->key());
 
 }
 

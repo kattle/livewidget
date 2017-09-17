@@ -59,9 +59,6 @@ void WidgetArrow::slot_ExecOperate(AREA_OPERATE pOperate, QVariant pPara)
                 mCurArrowPix = QPixmap(mImgFileList.at(0));
                 mArrowOrientation = ARROW_ROLLUP;
                 break;
-
-
-
             }
             break;
         }

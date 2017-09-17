@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = livewidget1.0.0
-DISTDIR = /mnt/hgfs/D/MyProject/livewidget_v2/livewidget/output/linux/.tmp/livewidget1.0.0
+DISTDIR = /mnt/hgfs/D/MyProject/livewidget/output/linux/.tmp/livewidget1.0.0
 LINK          = arm-linux-g++
 LFLAGS        = -Wl,-rpath,/opt/qt-5.7.1/lib
 LIBS          = $(SUBLIBS) -L/opt/qt-5.7.1/lib -lQt5Widgets -L/usr/local/tslib/lib -lQt5Gui -lQt5Core -lGLESv2 -lpthread 
@@ -176,12 +176,12 @@ DIST          = /opt/qt-5.7.1/mkspecs/features/spec_pre.prf \
 		/opt/qt-5.7.1/mkspecs/modules/qt_lib_xmlpatterns.pri \
 		/opt/qt-5.7.1/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
 		/opt/qt-5.7.1/mkspecs/modules/qt_lib_zlib_private.pri \
-		/opt/qtdeclarative-render2d-opensource-src-5.7.1/output/mkspecs/modules-inst/qt_plugin_softwarecontext.pri \
 		/opt/qt-5.7.1/mkspecs/modules/qt_plugin_softwarecontext.pri \
 		/opt/qt-5.7.1/mkspecs/features/qt_functions.prf \
 		/opt/qt-5.7.1/mkspecs/features/qt_config.prf \
 		/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++/qmake.conf \
 		/opt/qt-5.7.1/mkspecs/features/spec_post.prf \
+		../../.qmake.stash \
 		/opt/qt-5.7.1/mkspecs/features/exclusive_builds.prf \
 		/opt/qt-5.7.1/mkspecs/features/toolchain.prf \
 		/opt/qt-5.7.1/mkspecs/features/default_pre.prf \
@@ -327,12 +327,12 @@ Makefile: ../../livewidget.pro /opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++/qmake
 		/opt/qt-5.7.1/mkspecs/modules/qt_lib_xmlpatterns.pri \
 		/opt/qt-5.7.1/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
 		/opt/qt-5.7.1/mkspecs/modules/qt_lib_zlib_private.pri \
-		/opt/qtdeclarative-render2d-opensource-src-5.7.1/output/mkspecs/modules-inst/qt_plugin_softwarecontext.pri \
 		/opt/qt-5.7.1/mkspecs/modules/qt_plugin_softwarecontext.pri \
 		/opt/qt-5.7.1/mkspecs/features/qt_functions.prf \
 		/opt/qt-5.7.1/mkspecs/features/qt_config.prf \
 		/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++/qmake.conf \
 		/opt/qt-5.7.1/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/qt-5.7.1/mkspecs/features/exclusive_builds.prf \
 		/opt/qt-5.7.1/mkspecs/features/toolchain.prf \
 		/opt/qt-5.7.1/mkspecs/features/default_pre.prf \
@@ -453,12 +453,12 @@ Makefile: ../../livewidget.pro /opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++/qmake
 /opt/qt-5.7.1/mkspecs/modules/qt_lib_xmlpatterns.pri:
 /opt/qt-5.7.1/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
 /opt/qt-5.7.1/mkspecs/modules/qt_lib_zlib_private.pri:
-/opt/qtdeclarative-render2d-opensource-src-5.7.1/output/mkspecs/modules-inst/qt_plugin_softwarecontext.pri:
 /opt/qt-5.7.1/mkspecs/modules/qt_plugin_softwarecontext.pri:
 /opt/qt-5.7.1/mkspecs/features/qt_functions.prf:
 /opt/qt-5.7.1/mkspecs/features/qt_config.prf:
 /opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++/qmake.conf:
 /opt/qt-5.7.1/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/qt-5.7.1/mkspecs/features/exclusive_builds.prf:
 /opt/qt-5.7.1/mkspecs/features/toolchain.prf:
 /opt/qt-5.7.1/mkspecs/features/default_pre.prf:
@@ -864,7 +864,7 @@ moc_mainwindow.cpp: /opt/qt-5.7.1/include/QtWidgets/QMainWindow \
 		/opt/qt-5.7.1/include/QtCore/QSettings \
 		../../mainwindow.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../mainwindow.h -o moc_mainwindow.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../mainwindow.h -o moc_mainwindow.cpp
 
 moc_splashform.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtWidgets/qwidget.h \
@@ -1191,7 +1191,7 @@ moc_splashform.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtCore/QMutex \
 		../../splashform.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../splashform.h -o moc_splashform.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../splashform.h -o moc_splashform.cpp
 
 moc_qtuart.cpp: ../../Common/global.h \
 		/opt/qt-5.7.1/include/QtGui/QtGui \
@@ -1511,7 +1511,7 @@ moc_qtuart.cpp: ../../Common/global.h \
 		/opt/qt-5.7.1/include/QtCore/QReadWriteLock \
 		../../Drivers/qtuart.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Drivers/qtuart.h -o moc_qtuart.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Drivers/qtuart.h -o moc_qtuart.cpp
 
 moc_widgetbase.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtWidgets/qwidget.h \
@@ -1831,7 +1831,7 @@ moc_widgetbase.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtCore/QVariant \
 		../../Components/widgetbase.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetbase.h -o moc_widgetbase.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetbase.h -o moc_widgetbase.cpp
 
 moc_widgetmedia.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtWidgets/qwidget.h \
@@ -2157,7 +2157,7 @@ moc_widgetmedia.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtCore/QTimer \
 		../../Components/widgetmedia.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetmedia.h -o moc_widgetmedia.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetmedia.h -o moc_widgetmedia.cpp
 
 moc_effectbase.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtWidgets/qwidget.h \
@@ -2478,7 +2478,7 @@ moc_effectbase.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtCore/QTime \
 		../../Components/effectbase.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/effectbase.h -o moc_effectbase.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/effectbase.h -o moc_effectbase.cpp
 
 moc_widgetinfo.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtWidgets/qwidget.h \
@@ -2801,7 +2801,7 @@ moc_widgetinfo.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtGui/QFont \
 		../../Components/widgetinfo.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetinfo.h -o moc_widgetinfo.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetinfo.h -o moc_widgetinfo.cpp
 
 moc_widgetarrow.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtWidgets/qwidget.h \
@@ -3122,7 +3122,7 @@ moc_widgetarrow.cpp: /opt/qt-5.7.1/include/QtWidgets/QWidget \
 		/opt/qt-5.7.1/include/QtCore/QVariant \
 		../../Components/widgetarrow.h \
 		/opt/qt-5.7.1/bin/moc
-	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget_v2/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetarrow.h -o moc_widgetarrow.cpp
+	/opt/qt-5.7.1/bin/moc $(DEFINES) -I/opt/qt-5.7.1/mkspecs/linux-arm-gnueabi-g++ -I/mnt/hgfs/D/MyProject/livewidget -I/mnt/hgfs/D/MyProject/livewidget/Drivers -I/mnt/hgfs/D/MyProject/livewidget/Components -I/mnt/hgfs/D/MyProject/livewidget/Common -I/opt/qt-5.7.1/include -I/opt/qt-5.7.1/include/QtWidgets -I/opt/qt-5.7.1/include/QtGui -I/opt/qt-5.7.1/include/QtCore -I. -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4 -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/arm-nuvoton-linux-uclibceabi -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include/c++/4.8.4/backward -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include -I/usr/local/arm_linux_4.8/lib/gcc/arm-nuvoton-linux-uclibceabi/4.8.4/include-fixed -I/usr/local/arm_linux_4.8/arm-nuvoton-linux-uclibceabi/include -I/usr/local/arm_linux_4.8/usr/include ../../Components/widgetarrow.h -o moc_widgetarrow.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -3826,7 +3826,36 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		/opt/qt-5.7.1/include/QtCore/QFile \
 		/opt/qt-5.7.1/include/QtCore/QReadWriteLock \
 		/opt/qt-5.7.1/include/QtCore/QSettings \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/opt/qt-5.7.1/include/QtWidgets/QAction \
+		/opt/qt-5.7.1/include/QtWidgets/qaction.h \
+		/opt/qt-5.7.1/include/QtWidgets/qactiongroup.h \
+		/opt/qt-5.7.1/include/QtWidgets/QApplication \
+		/opt/qt-5.7.1/include/QtWidgets/qapplication.h \
+		/opt/qt-5.7.1/include/QtWidgets/qdesktopwidget.h \
+		/opt/qt-5.7.1/include/QtWidgets/QButtonGroup \
+		/opt/qt-5.7.1/include/QtWidgets/qbuttongroup.h \
+		/opt/qt-5.7.1/include/QtWidgets/QHeaderView \
+		/opt/qt-5.7.1/include/QtWidgets/qheaderview.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractitemview.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt-5.7.1/include/QtWidgets/qframe.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt-5.7.1/include/QtWidgets/qstyleoption.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt-5.7.1/include/QtWidgets/qslider.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractslider.h \
+		/opt/qt-5.7.1/include/QtWidgets/qstyle.h \
+		/opt/qt-5.7.1/include/QtWidgets/qtabbar.h \
+		/opt/qt-5.7.1/include/QtWidgets/qrubberband.h \
+		/opt/qt-5.7.1/include/QtWidgets/QLabel \
+		/opt/qt-5.7.1/include/QtWidgets/qlabel.h \
+		/opt/qt-5.7.1/include/QtWidgets/QPushButton \
+		/opt/qt-5.7.1/include/QtWidgets/qpushbutton.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractbutton.h \
+		/opt/qt-5.7.1/include/QtWidgets/QStackedWidget \
+		/opt/qt-5.7.1/include/QtWidgets/qstackedwidget.h \
+		../../Components/widgetarrow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
 
 splashform.o: ../../splashform.cpp ../../splashform.h \
@@ -4153,7 +4182,33 @@ splashform.o: ../../splashform.cpp ../../splashform.h \
 		/opt/qt-5.7.1/include/QtCore/QThread \
 		/opt/qt-5.7.1/include/QtCore/QMutexLocker \
 		/opt/qt-5.7.1/include/QtCore/QMutex \
-		ui_splashform.h
+		ui_splashform.h \
+		/opt/qt-5.7.1/include/QtWidgets/QAction \
+		/opt/qt-5.7.1/include/QtWidgets/qaction.h \
+		/opt/qt-5.7.1/include/QtWidgets/qactiongroup.h \
+		/opt/qt-5.7.1/include/QtWidgets/QApplication \
+		/opt/qt-5.7.1/include/QtWidgets/qapplication.h \
+		/opt/qt-5.7.1/include/QtWidgets/qdesktopwidget.h \
+		/opt/qt-5.7.1/include/QtWidgets/QButtonGroup \
+		/opt/qt-5.7.1/include/QtWidgets/qbuttongroup.h \
+		/opt/qt-5.7.1/include/QtWidgets/QHeaderView \
+		/opt/qt-5.7.1/include/QtWidgets/qheaderview.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractitemview.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractscrollarea.h \
+		/opt/qt-5.7.1/include/QtWidgets/qframe.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/qt-5.7.1/include/QtWidgets/qstyleoption.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractspinbox.h \
+		/opt/qt-5.7.1/include/QtWidgets/qslider.h \
+		/opt/qt-5.7.1/include/QtWidgets/qabstractslider.h \
+		/opt/qt-5.7.1/include/QtWidgets/qstyle.h \
+		/opt/qt-5.7.1/include/QtWidgets/qtabbar.h \
+		/opt/qt-5.7.1/include/QtWidgets/qtabwidget.h \
+		/opt/qt-5.7.1/include/QtWidgets/qrubberband.h \
+		/opt/qt-5.7.1/include/QtWidgets/QLabel \
+		/opt/qt-5.7.1/include/QtWidgets/qlabel.h \
+		/opt/qt-5.7.1/include/QtWidgets/QProgressBar \
+		/opt/qt-5.7.1/include/QtWidgets/qprogressbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o splashform.o ../../splashform.cpp
 
 qtuart.o: ../../Drivers/qtuart.cpp ../../Drivers/qtuart.h \

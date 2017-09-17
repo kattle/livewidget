@@ -16,7 +16,6 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QWidget>
 #include "splashform.h"
@@ -35,7 +34,6 @@ public:
     WidgetArrow *wid_arrow;
     QWidget *page_setting;
     QLabel *label;
-    QPushButton *pushButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -45,6 +43,19 @@ public:
         MainWindow->setStyleSheet(QLatin1String("QWidget#desktop {\n"
 "        background: rgb(68, 69, 73);\n"
 "}\n"
+"QWidget{\n"
+"        font-size: 15px;\n"
+"        font-family: \"arial\";\n"
+"\n"
+"}\n"
+"\n"
+"QLabel#label {\n"
+"        font: bold;\n"
+"        font-family: \"arial\";\n"
+"        color: rgb(255, 0, 0);\n"
+"        font-size: 20px;\n"
+"}\n"
+"\n"
 ""));
         desktop = new QWidget(MainWindow);
         desktop->setObjectName(QStringLiteral("desktop"));
@@ -67,10 +78,7 @@ public:
         page_setting->setObjectName(QStringLiteral("page_setting"));
         label = new QLabel(page_setting);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(230, 170, 221, 41));
-        pushButton = new QPushButton(page_setting);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(290, 80, 99, 27));
+        label->setGeometry(QRect(180, 240, 381, 41));
         stackedWidget->addWidget(page_setting);
         MainWindow->setCentralWidget(desktop);
 
@@ -83,7 +91,6 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "label", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };

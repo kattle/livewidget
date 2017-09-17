@@ -42,7 +42,25 @@ public:
 "QProgressBar::chunk {\n"
 "        border: none;\n"
 "        background: rgb(0, 160, 230);\n"
-"}"));
+"}\n"
+"\n"
+"QWidget#desktop {\n"
+"        background: rgb(68, 69, 73);\n"
+"}\n"
+"QWidget{\n"
+"        font-size: 15px;\n"
+"        font-family: \"arial\";\n"
+"\n"
+"}\n"
+"\n"
+"QLabel#label {\n"
+"        font: bold;\n"
+"        font-family: \"arial\";\n"
+"        color: rgb(255, 0, 0);\n"
+"        font-size: 20px;\n"
+"}\n"
+"\n"
+""));
         progressBar = new QProgressBar(SplashForm);
         progressBar->setObjectName(QStringLiteral("progressBar"));
         progressBar->setGeometry(QRect(0, 370, 400, 20));

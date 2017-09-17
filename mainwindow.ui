@@ -17,6 +17,19 @@
    <string notr="true">QWidget#desktop {
         background: rgb(68, 69, 73);
 }
+QWidget{
+        font-size: 15px;
+        font-family: &quot;arial&quot;;
+
+}
+
+QLabel#label {
+        font: bold;
+        font-family: &quot;arial&quot;;
+        color: rgb(255, 0, 0);
+        font-size: 20px;
+}
+
 </string>
   </property>
   <widget class="QWidget" name="desktop">
@@ -57,27 +70,14 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>170</y>
-        <width>221</width>
+        <x>180</x>
+        <y>240</y>
+        <width>381</width>
         <height>41</height>
        </rect>
       </property>
       <property name="text">
        <string>label</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>80</y>
-        <width>99</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
       </property>
      </widget>
     </widget>
